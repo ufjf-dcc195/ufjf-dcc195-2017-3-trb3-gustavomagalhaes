@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Trabalho 3 - Remover produto</title>
+    <link href="/css/bootstrap.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Remover produto</h1>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="col">
+                    Confirma a remoção do produto
+                    <%=produto.nome%>?
+                </div>
+                <div class="col">
+                    <form method="post">
+                        <input type="hidden" name="id" value="<%=produto.id%>" />
+                        <input type="submit" value="Sim" class="btn btn-primary" />
+                        <a class="btn btn-light" href="/produto.html">Não</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

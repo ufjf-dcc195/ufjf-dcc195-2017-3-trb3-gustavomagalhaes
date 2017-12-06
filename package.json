@@ -1,0 +1,21 @@
+{
+  "name": "trabalho3-dcc195",
+  "version": "1.0.0",
+  "description": "Trabalho 3 da disciplina DCC195 do curso de Ciência da Computação da UFJF",
+  "main": "index.js",
+  "engines": {
+    "node": "6.11.2"
+  },
+  "author": "Gustavo Magalhães Moura",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "compression": "^1.7.0",
+    "ejs": "^2.5.7",
+    "express": "^4.15.4",
+    "express-session": "^1.15.5",
+    "method-override": "^2.3.9",
+    "mongoose": "^4.13.6",
+    "morgan": "^1.8.2"
+  }
+}

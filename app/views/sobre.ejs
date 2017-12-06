@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link href="/css/bootstrap.css" rel="stylesheet" type="text/css">
+  <title>
+    <%=titulo%>
+  </title>
+</head>
+
+<body>
+  <div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="card-body">
+            <h4 class="card-title">
+              <%= titulo %>
+            </h4>
+            <p class="card-text">
+              Aluno:
+              <%= nome %>
+                <br> Matrícula:
+                <%= matricula %>
+                  <br> E-mail:
+                  <%= email %>
+                    <br> Curso:
+                    <%= curso %>
+            </p>
+            <p><a class="btn btn-ligh" href="/index.html">Voltar</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

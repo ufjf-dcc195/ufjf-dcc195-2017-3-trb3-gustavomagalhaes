@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Trabalho 3 - Editar produto</title>
+    <link href="/css/bootstrap.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Editar produto</h1>
+        <div class="row">
+            <div class="col-lg-6">
+                <form method="post">
+                    <input type="hidden" name="id" value="<%=produto.id%>" />
+                    <div class="form-group">
+                        <label for="nome">Nome</label>
+                        <input class="form-control" type="text" name="nome" placeholder="Nome" value="<%=produto.nome%>" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="preco_base">Preço base</label>
+                        <input class="form-control" type="number" min="0" step=".01" name="preco_base" placeholder="Preço base" value="<%=produto.preco_base%>"
+                            required/>
+                    </div>
+                    <input type="submit" class="btn btn-primary" value="Editar"/>
+                    <a class="btn btn-light" href="/produto.html">Voltar</a>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

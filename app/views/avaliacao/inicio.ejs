@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Trabalho 3 - Avaliação</title>
+    <link href="/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="/css/basic.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Avaliação</h1>
+        <div class="row">
+            <div class="col-lg-6">
+                <form method="post" action="avaliacao/avaliar.html">
+                    <div class="form-group">
+                        <label for="cliente">Cliente</label>
+                        <select class="form-control" name="cliente" required >
+                            <option value="" class="hidden" selected>(Selecione)</option>
+                            <% for(let i = 0; i < clientes.length; i++) { %>
+                                <option value="<%=clientes[i].id %>"><%=clientes[i].nome%></option>
+                            <% } %>
+                        </select>
+                    </div>
+                    <input type="submit" class="btn btn-primary" value="Entrar"/>
+                    <a class="btn btn-light" href="/index.html">Voltar</a>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

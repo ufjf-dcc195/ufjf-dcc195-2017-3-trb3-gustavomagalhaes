@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Trabalho 3 - Avaliar produtos</title>
+    <link href="/css/bootstrap.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Avaliar produtos</h1>
+        <div class="row">
+            <div class="col-lg-10">
+                <form method="post" action="/avaliacao/salvar.html">
+                    <input type="hidden" name="cliente" value="<%=cliente_id%>"/>
+                    <div class="form-group">
+                        <label for="cliente">Avaliações</label>
+                        <small class="form-text text-muted">Escala: 0/inexistente - sem interesse, 1 - baixo interesse, 2 - tenho interesse e 3 - muito interessado.</small>
+                        <% for(let i= 0; i < produtos.length; i++) { %>
+                            <div class="row">
+                                <div class="col">
+                                        <div class="form-check form-check-inline">
+                                            <%=produtos[i].nome%>:
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" type="radio" name="prod.<%=produtos[i]._id%>" value="0" <% if (produtos[i].avaliacao == 0) { %> checked <% } %> > 0
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" type="radio" name="prod.<%=produtos[i]._id%>" value="1" <% if (produtos[i].avaliacao == 1)  { %> checked <% } %> > 1
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" type="radio" name="prod.<%=produtos[i]._id%>" value="2" <% if (produtos[i].avaliacao == 2)  { %> checked <% } %> > 2
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" type="radio" name="prod.<%=produtos[i]._id%>" value="3" <% if (produtos[i].avaliacao == 3)  { %> checked <% } %> > 3
+                                            </label>
+                                        </div>
+                                </div>
+                            </div>
+                            <% } %>
+                                <input type="submit" class="btn btn-primary" value="Salvar" />
+                                <a class="btn btn-light" href="/avaliacao.html">Voltar</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
